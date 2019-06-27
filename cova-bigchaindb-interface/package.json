@@ -1,0 +1,28 @@
+{
+  "name": "cova-data-marketplace-api",
+  "version": "1.0.0",
+  "description": "Data marketplace api for cavalent.ai",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "data",
+    "api",
+    "covalent",
+    "marketplace"
+  ],
+  "author": "nadim-abrar",
+  "license": "ISC",
+  "dependencies": {
+    "async-request": "^1.2.0",
+    "async-sleep": "^0.1.0",
+    "await-timeout": "^0.2.0",
+    "bigchaindb-driver": "^4.1.0",
+    "bip39": "^2.5.0",
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "md5": "^2.2.1"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/*
+.ergo
+.env
+./config/*
+config.js
+config/amazon-rds-ca-cert.pem

@@ -1,0 +1,43 @@
+
+<div id='html_element'></div>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script>
+
+var onloadCallback = function() {
+  var testKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
+  var realKey = '6LfOXH0UAAAAAPTniEnAqua8oepj7eREXNazKI9n';
+  grecaptcha.render('html_element', {
+    'sitekey' : realKey,
+    'callback' : correctCaptcha
+  });
+};
+
+var correctCaptcha = function(response) {
+  var submitBtn = document.getElementById('btn-submit');
+
+  if(response.length !== 0){
+    // make ajax call here to verify the captcha
+    $.ajax({
+      type: "POST",
+      url: "/verify-captcha",
+      data: { captcha: response },
+      success: function(result) {
+        if (result === true) {
+          $('#captcha_box').val(response);
+          if(submitBtn.disabled) {
+            submitBtn.disabled = false;
+          }
+        } else {
+          submitBtn.disabled = true;
+        }
+      },
+      error: function(err) {
+        submitBtn.disabled = true;
+      }
+    });
+  }
+};
+
+
+</script>

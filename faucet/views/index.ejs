@@ -1,0 +1,88 @@
+<%- include header.ejs %>
+<body class="bg_light">
+  <!-- START LOADER -->
+<div id="loader-wrapper">
+    <div id="loading-center-absolute">
+        <div class="object" id="object_four"></div>
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_one"></div>
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- END LOADER -->
+  <%- include navbar.ejs %>
+    <section id="home" class="section_banner blue_light_bg banner_shape" data-z-index="1" data-bleed="-40"
+             data-parallax="scroll">
+        <div id="banner_bg_effect" class="banner_effect"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 order-lg-first">
+                    <div class="animation text-center animation" data-animation="fadeInDown" data-animation-delay="0.3s">
+                        <img src="assets/images/cova-geometric-logo.svg" alt="Cova Logo"
+                             class="cova_graphical_logo_big cova_md_graphical_logo_big mb-4"/>
+                    </div>
+                    <div class="animation text-center animation " data-animation="fadeInUp" data-animation-delay="0.4s">
+                        <img src="assets/images/cova-logo.svg" alt="Cova Logo" class="cova_logo_big cova_md_logo_big "/>
+                    </div>
+                    <div class="banner_text text_md_center text-center">
+                    <h1 class="animation cova_logo_title us" data-animation="fadeInUp"
+                        data-animation-delay="0.3s">FakeCova Faucet</h1>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blue_light_bg banner_shape" data-z-index="1" data-bleed="-40" data-parallax="scroll"
+         data-image-src="assets/images/banner_bg3.png">
+      <div class="mainBody container">
+        <div id="intro">
+              <div class="text_to_show">
+                <form action="form-submit" method="POST">
+                  <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="username" name="username" required/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" name="email" required/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="company" class="col-sm-2 col-form-label">Company/Affiliation</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="company" name="company" required/>
+                      <input type="hidden" id="captcha_box" name="captcha"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Short description of product and purpose</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="description" name="description" required></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                    </label>
+                    <div class="col-sm-5">
+                      <%- include captcha.ejs %>
+                    </div>
+                    <div class="col-sm-5">
+                      <button disabled="true" id="btn-submit" type="submit" class="btn btn-success" style="float:right">Get 100 FakeCova</button>
+                    </div>
+                  </div>
+                </form>
+                <br>
+                <%- include balance_checker.ejs %>
+                </div>
+            </div>
+      </div>
+    </section>
+</body>
+
+<%- include footer.ejs %>

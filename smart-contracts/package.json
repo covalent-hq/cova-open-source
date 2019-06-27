@@ -1,0 +1,17 @@
+{
+  "name": "smart-contracts",
+  "version": "1.0.0",
+  "description": "cova smart contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nadim",
+  "license": "ISC",
+  "dependencies": {
+    "truffle-privatekey-provider": "^1.0.0"
+  }
+}

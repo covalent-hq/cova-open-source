@@ -1,0 +1,7 @@
+*.pyc
+computer_logs.txt
+router_logs.txt
+data_user_logs.txt
+test.py
+test_client.py
+__pycache__
